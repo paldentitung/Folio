@@ -20,7 +20,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
-      <div className="flex items-center justify-between p-4 md:p-6 max-w-5xl mx-auto">
+      <div className="flex items-center justify-between p-4 md:p-6 max-w-7xl mx-auto">
         <div className="flex items-center gap-2">
           <span className="bg-black rounded-full text-white w-8 h-8 flex items-center justify-center text-sm">
             F
