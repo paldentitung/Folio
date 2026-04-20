@@ -19,7 +19,7 @@ export default function BlogList() {
           {posts.map((post) => (
             <Link
               key={post.href}
-              href={post.href}
+              href={`/blog/${post.slug}`}
               className="group flex flex-col overflow-hidden rounded-2xl bg-white border border-gray-100 transition-all duration-500 hover:-translate-y-1 hover:shadow-md"
             >
               {/* Image */}
@@ -46,7 +46,7 @@ export default function BlogList() {
                 </p>
                 <div className="mt-auto pt-5 flex items-center justify-between text-xs text-gray-400 border-t border-gray-100">
                   <span className="font-medium text-gray-700">
-                    {post.author}
+                    {post.author.name}
                   </span>
                   <span>{post.date}</span>
                 </div>

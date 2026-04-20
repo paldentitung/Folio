@@ -49,7 +49,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 border border-gray-100 rounded-xl overflow-hidden bg-white">
             <div className="relative min-h-75 bg-[#d4cfc8]">
               <Image
-                src="/assets/editors-pick.jpg"
+                src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80"
                 alt="The Quiet Discipline of Writing Daily"
                 fill
                 className="object-cover"
