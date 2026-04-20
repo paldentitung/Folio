@@ -1,65 +1,131 @@
 import Image from "next/image";
-
+import MainButton from "../components/MainButton";
+import SecondaryButton from "@/components/SecondaryButton";
+import BlogList from "@/components/BlogList";
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <section>
+      <div className="min-h-[60vh] flex items-center justify-center bg-[#fdf8f2] px-6 py-20">
+        <div className="flex flex-col items-center text-center gap-5 w-full max-w-350">
+          <span className="text-[11px] tracking-widest uppercase text-[#b07d5a] border border-[#d9b99a] px-4 py-1 rounded-full">
+            A journal of slow ideas
+          </span>
+
+          <div className="w-10 h-px bg-[#d9b99a]" />
+
+          <h1 className="font-serif text-4xl md:text-5xl lg:text-7xl font-normal text-[#2c2420] leading-tight">
+            Slow words for
+            <br className="hidden md:block" /> a faster world.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          <p className="text-base md:text-lg text-[#7a6a62] leading-relaxed max-w-2xl">
+            Folio is a quiet journal of essays on writing, design, and the small
+            rituals that shape a thoughtful life.
+          </p>
+
+          <div className="flex flex-wrap gap-3 items-center justify-center mt-2">
+            <MainButton name="Read the latest" />
+            <SecondaryButton name="Our story" />
+          </div>
+        </div>
+      </div>
+
+      <div className="py-12 px-6 md:px-10">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-end justify-between mb-7">
+            <div>
+              <p className="text-xs tracking-widest uppercase text-gray-400 mb-1">
+                Featured
+              </p>
+              <h2 className="text-2xl font-medium text-gray-900">
+                Editor's pick
+              </h2>
+            </div>
+            <button className="text-sm text-gray-500 border border-gray-200 px-4 py-1.5 rounded-lg hover:bg-gray-50 transition">
+              View all →
+            </button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 border border-gray-100 rounded-xl overflow-hidden bg-white">
+            <div className="relative min-h-75 bg-[#d4cfc8]">
+              <Image
+                src="/assets/editors-pick.jpg"
+                alt="The Quiet Discipline of Writing Daily"
+                fill
+                className="object-cover"
+              />
+              <span className="absolute top-3.5 left-3.5 text-[10px] tracking-widest uppercase bg-white text-gray-500 border border-gray-200 px-2.5 py-1 rounded-md">
+                Essay
+              </span>
+            </div>
+
+            <div className="p-8 flex flex-col justify-between">
+              <div>
+                <span className="text-[11px] tracking-widest uppercase text-gray-400 mb-4 block">
+                  Craft
+                </span>
+                <h3 className="text-xl font-medium text-gray-900 leading-snug mb-4">
+                  The Quiet Discipline of Writing Daily
+                </h3>
+                <p className="text-sm text-gray-500 leading-relaxed">
+                  Why showing up at the page — even for ten minutes — changes
+                  more than your prose. A meditation on small habits and slow
+                  craft.
+                </p>
+              </div>
+
+              <div className="flex items-center justify-between mt-7 pt-5 border-t border-gray-100">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-full bg-[#d4c8c0] flex items-center justify-center text-[11px] font-medium text-[#7a6a62]">
+                    ML
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-gray-900">
+                      Maya Lin
+                    </p>
+                    <p className="text-xs text-gray-400">6 min read</p>
+                  </div>
+                </div>
+                <button className="text-sm text-gray-800 border border-gray-200 px-4 py-1.5 rounded-lg hover:bg-gray-50 transition">
+                  Read →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <BlogList />
+      </div>
+
+      <div className="bg-[#fdf8f2] rounded-2xl px-8 py-12 flex flex-col items-center text-center gap-6 max-w-7xl mx-auto my-16">
+        <div className="w-6 h-px bg-[#d9b99a]" />
+
+        <div className="flex flex-col gap-2">
+          <h3 className="font-serif text-2xl md:text-3xl font-normal text-[#2c2420]">
+            A short letter, once a month.
+          </h3>
+          <p className="text-sm text-[#7a6a62] leading-relaxed">
+            One essay, a few links, no noise. Unsubscribe whenever.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="flex w-full max-w-sm gap-2 mt-2">
+          <input
+            type="email"
+            placeholder="your@email.com"
+            className="flex-1 text-sm px-4 py-2.5 rounded-lg border border-[#d9b99a] bg-white text-gray-800 placeholder:text-gray-400 outline-none focus:ring-1 focus:ring-[#b07d5a] transition"
+          />
+          <button className="text-sm px-5 py-2.5 rounded-lg bg-[#2c2420] text-[#fdf8f2] hover:bg-[#3d342e] transition whitespace-nowrap">
+            Subscribe
+          </button>
         </div>
-      </main>
-    </div>
+
+        <p className="text-xs text-[#b07d5a]">
+          No spam, ever. Just quiet words.
+        </p>
+      </div>
+    </section>
   );
 }
