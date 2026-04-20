@@ -5,7 +5,7 @@ A quiet journal of essays on writing, design, and the slow craft of paying atten
 ---
 ## 🌐 Live Demo
 
-[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-ShopNest-blue?style=for-the-badge)](https://folio-pi-jet.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-folio-blue?style=for-the-badge)](https://folio-pi-jet.vercel.app/)
 ---
 ## Tech stack
 
